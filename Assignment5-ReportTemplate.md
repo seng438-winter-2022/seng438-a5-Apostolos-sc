@@ -1,5 +1,5 @@
-**SENG 43[Lab5.pdf](https://github.com/seng438-winter-2022/seng438-a5-Apostolos-sc/files/8446416/Lab5.pdf)
-8- Software Testing, Reliability, and Quality**
+[Lab5.pdf](https://github.com/seng438-winter-2022/seng438-a5-Apostolos-sc/files/8446416/Lab5.pdf)
+**SENG 438- Software Testing, Reliability, and Quality**
 
 **Lab. Report \#5 – Software Reliability Assessment**
 
@@ -64,93 +64,42 @@ Our team chose to use the RGT tool called C-SFRAT. We imported the failure data 
 The software originally shows a plot of Total Cumulative Failures versus Time Interval :
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Figure 1: Total Cumulative Failures vs. Time Interval
-
-
+![fig1](Figures/fig1.PNG)
+<p align="center"><em>Figure 1: Total Cumulative Failures vs. Time Interval</em></p>
 
 
 First we run the 8 simulations using covariates E, F as the covariates :
 
-
-Figure 2: Simulated RGT Models on Covariate Failure Data
+![fig2](Figures/fig2.PNG)
+<p align="center"><em> Figure 2: Simulated RGT Models on Covariate Failure Data</em></p>
 Then we viewed the model comparison data provided by the software  : 
 
-
-
-
-
-
-
-
-
-Figure 3: Model Comparison Data
+![fig3](Figures/fig3.PNG)
+<p align="center"><em> Figure 3: Model Comparison Data</em></p>
 
 The 5 criteria of interest are : the log-likelihood, the Akaike information criterion (AIC) and Bayesian Information Criteria (BIC) as well as sum of squares (SSE) and predictive sum of squares error (PSSE).
 By looking at these 5 parameters we determine that IFRGSB is ranked as our number 1 most fitting model and then GM is #2. We picked GM as #2 by comparing S, GM, TL on AIC, BIC, SSE and PSSE. GM scored lower in 3 of those criteria. 
 
 Isolating the two  models we can see that they closely follow the pattern of failures on the specified intervals : 
 
-Figure 4: Isolated Best-Fit RGT Models
+![fig4](Figures/fig4.PNG)
+<p align="center"><em> Figure 4: Isolated Best-Fit RGT Models</em></p>
 
 The software also allows us to view the models and data as failure intensity versus time. The following graph shows the data we imported.
 The x-axis represents the failures on a specific interval and then the y-axis represents the time interval those failures occurred in.
 
+![fig5](Figures/fig5.PNG)
+<p align="center"><em> Figure 5: Failure Intensity Graph</em></p>
 
+![fig6](Figures/fig6.PNG)
+<p align="center"><em> Figure 6: Simulated RGT Models on Failure Intensity Graph</em></p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Figure 5: Failure Intensity Graph
-
-Figure 6: Simulated RGT Models on Failure Intensity Graph
-
-Figure 7: Isolated Best-Fit RGT Models
+![fig7](Figures/fig7.PNG)
+<p align="center"><em> Figure 7: Isolated Best-Fit RGT Models</em></p>
 In order to choose our data range, we manually inputted our test data into the software called CASRE using a VM to run the software. Our results of Laplace trend testing can be seen in the following screenshots: 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Figure 8: CASRE Laplace Test Results
+![fig8](Figures/fig8.PNG)
+<p align="center"><em> Figure 8: CASRE Laplace Test Results</em></p>
 
 From the Laplace test we observe for the test intervals 1 to 18 there is stable reliability and slight reliability growth. After that for the  interval of values 19 to 31 we observe stable reliability since the laplace test values are between 2 and -2 as we can see from the data and the plot. Since the Laplace test indicates fairly stable reliability with not too many extreme high number failures at random intervals it is fair to accept the whole range of provided data. 
 
@@ -166,18 +115,18 @@ Reliability growth testing is advantageous as it allows for the estimation of sy
 
 For assessing this hypothetical System Under Test we used the provided RDC excel spreadsheet. First, we substituted the demonstration data with the given data points, combining the time intervals in sets of two and accumulating the errors detected at that point. Then by selecting the first 5 data points to show on the graph, as described by the TA team during labs, we could begin to define the minimum acceptable threshold for system errors. The first point at which the system is acceptable is when a maximum of 40 errors are found through 32 time intervals, the next steps are to set the MTTFmin to twice the original value, and then half of the original value; these plots are shown below, respectively. 
 
-Figure 9: Minimum MTTF
+![fig9](Figures/fig9.PNG)
+<p align="center"><em> Figure 9: Minimum MTTF</em></p>
 
+![fig10](Figures/fig10.PNG)
+<p align="center"><em> Figure 10: Twice the Minimum MTTF </em></p>
 
-Figure 10: Twice the Minimum MTTF 
-
-
-
-Figure 11: Half the Minimum MTTF 
+![fig11](Figures/fig11.PNG)
+<p align="center"><em> Figure 11: Half the Minimum MTTF </em></p>
 
 What is evident in these plots is that as the acceptable number of failures increases, the program becomes more acceptable for use, and as the MTTF decreases, the program must be rejected for the amount of failures that occur during the runtime. This is reasonable considering that the MTTF is a measurement of the overall time that a system runs, divided by the number of failures or defects. 
 
-In order to determine the minimum MTTF, we tested the failure data with different MTTF values until we arrived at a plot where the last failure data was just hardly crossing into the accepted plot range, as seen in Figure 9.
+In order to determine the minimum MTTF, we tested the failure data with different MTTF values until we arrived at a plot where the last failure data was just hardly crossing into the accepted plot range, as seen in <p align="center"><em> Figure 9.
 
 The advantage of using RDC to determine the reliability of an SUT is that it allows both the customer and developer to determine the acceptable failure rate for a system. With RDC, the failure data is easily visualized in comparison wih the acceptable and rejectable failure targets. Furthermore, once used to the tools, RDC is a very fast and cost-efficient way of determining the reliability of an SUT. However, one disadvantage noticed in this lab is that the MTFF minimum requires a little more good guess-work, but the visualization of the chart definitely assists in arriving at the assumed MTTF minimum, despite being tedious. It also shows reliability in terms of relativity and trend rather than providing a quantitative value. 
 
@@ -191,13 +140,13 @@ There are some similarities and differences that we noticed between the Reliabil
 
 # How the team work/effort was divided and managed
 
-Haniya and Apostolos worked on the first part of the lab assignment together. They worked on figuring out how to use the tools such as CSFRAT, CASRE and SRTAT. They successfully figured out how to use CASRE for by installing a Virtual Machine for DOS and running CASRE and manually inputting our data points. They then ran the laplace tests and chose the acceptable data range. In order to find which reliability model is best to fit with the provided data they used the tool CSFRAT. They ran several simulations and provided the charts and analysis on why the IFR Salvia & Bollinger (IFRSB) and Geometric (GM) models fit best the provided test data. Josh and Beau worked on the second part of the lab assignment together and attempted using both SRTAT and the provided Excel sheet to determine an RDC model for the provided failure data. They were able to adjust the data in the Excel file according to the provided failure data, specifically the cumulative failure counts, to produce an RDC. They adjusted the chart variables to determine the minimum MTTF, scaled the demo chart, and scaled the boundaries to arrive at accurate results of the data. 
+Haniya and Apostolos worked on the first part of the lab assignment together. They worked on figuring out how to use the tools such as CSFRAT, CASRE and SRTAT. They successfully <p align="center"><em> figured out how to use CASRE for by installing a Virtual Machine for DOS and running CASRE and manually inputting our data points. They then ran the laplace tests and chose the acceptable data range. In order to find which reliability model is best to fit with the provided data they used the tool CSFRAT. They ran several simulations and provided the charts and analysis on why the IFR Salvia & Bollinger (IFRSB) and Geometric (GM) models fit best the provided test data. Josh and Beau worked on the second part of the lab assignment together and attempted using both SRTAT and the provided Excel sheet to determine an RDC model for the provided failure data. They were able to adjust the data in the Excel file according to the provided failure data, specifically the cumulative failure counts, to produce an RDC. They adjusted the chart variables to determine the minimum MTTF, scaled the demo chart, and scaled the boundaries to arrive at accurate results of the data. 
 
 
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
-Even though the concepts were not hard, it was very challenging to figure out how to get each tool to work. CSFRAT was the easiest of all to use and most straightforward. SRTAT was even more challenging as the RDC functionality was not working and we had issues on getting the tool to model using our data. CASRE would be the recommended tool to use in order to perform the laplace test, but I would suggest to the TA’s if they use CASRE again to give clear instructions on how to use it for La Place testing. The RDC tool is also very hard to use. There are no clear instructions provided by the user manual. There was an overview of 1 page and that was it. The team learnt that you can not give up and keep trying until you get an acceptable result. Sometimes your efforts do not reflect the result and that is okay.
+Even though the concepts were not hard, it was very challenging to <p align="center"><em> figure out how to get each tool to work. CSFRAT was the easiest of all to use and most straightforward. SRTAT was even more challenging as the RDC functionality was not working and we had issues on getting the tool to model using our data. CASRE would be the recommended tool to use in order to perform the laplace test, but I would suggest to the TA’s if they use CASRE again to give clear instructions on how to use it for La Place testing. The RDC tool is also very hard to use. There are no clear instructions provided by the user manual. There was an overview of 1 page and that was it. The team learnt that you can not give up and keep trying until you get an acceptable result. Sometimes your efforts do not reflect the result and that is okay.
 
 # Comments/feedback on the lab itself
 
@@ -206,48 +155,22 @@ Overal, this was perhaps that trickiest lab for all group members. Although a va
 A few quick comments on the lab :
 For CASRE tool, let people know how to run the tool.
 First install the virtual machine by running DOSBoxinst.exe :
-
-
-
-
-
-
-
-
-
-
+![step1](Figures/step1.PNG)
 
 Second step : Run inst.bat
-
-Step 3 : Running CASRE 
+![step2](Figures/step2.PNG)
+  
+Third step : Running CASRE 
+![step3](Figures/step3.PNG)
 
 Quick note, do the data inputting directly through the VM as in some machines the Virtual Box and the System files do not update after you are done using the VM or even won’t read files added in the VM system folder (new ones). There is some sort of caching that is done the leads to unexpected behavior.
-Instead : run the built in notepad :
-
-
-
-
-
-
-
-
-
-
-
-
-
+Instead, run the built in notepad :
+![notepad](Figures/notepad.PNG)
 
 And manually input the information in the following format : 
-
+![format](Figures/format.PNG)
 
 This info was taken from page 192/220 of the user manual or ~180 of the original paper manual.
-
-
-
-
-
-
-
-
+![manual](Figures/manual.PNG)
 
 
